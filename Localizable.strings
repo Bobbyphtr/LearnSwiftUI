@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  LearnSwiftUI
+
+  Created by Bobby Pehtrus on 08/08/22.
+  
+*/
+
+"no-items-title" = "There are no items!";
+"no-items-description" = "Have something to finish? You better get ready to sprint";
+
+"There are no items!" = "This is not expected.";
