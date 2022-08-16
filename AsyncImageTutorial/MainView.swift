@@ -14,6 +14,7 @@ struct MainView: View {
                 ContentView()
             }
             .animation(.default, value: true)
+            .navigationBarTitleDisplayMode(.inline)
         }
        
     }
