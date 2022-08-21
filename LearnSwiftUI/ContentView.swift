@@ -89,16 +89,6 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     VStack {
-                        TVLVCSwiftUI { context in
-                            let customVC = MyViewController()
-                            return customVC
-                        } updater: { vc, context in
-                            if let myVC: MyViewController = vc as? MyViewController {
-                                myVC.updateLabel(text: "\(playerScore)")
-                            }
-                        } coordinator: {
-                            return MyCoordinator(playerScore: $playerScore, aiScore: $AIScore)
-                        }
                         Text("Player")
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
@@ -109,23 +99,6 @@ struct ContentView: View {
                     }
                     Spacer()
                     VStack {
-                        TVLViewSwiftUI ({ context in
-                            let textfield = CustomUITextField()
-                            print("Init textfield \(textfield)")
-                            textfield.keyboardType = .numberPad
-                            textfield.delegate = context.coordinator as! MyCoordinator
-                            return textfield
-                        }, updater: { view, _ in
-                            // Update from SwiftUI to UIKit
-                            if let textfield : UITextField = view as? UITextField {
-                                textfield.text = String(AIScore)
-                            }
-                        }, coordinator: {
-                            // Update from UIKit to SwiftUI
-                            return MyCoordinator(playerScore: $playerScore, aiScore: $AIScore)
-                        })
-                        .background(Color.gray)
-                        .frame(height: 55.0)
                         Text("AI")
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)

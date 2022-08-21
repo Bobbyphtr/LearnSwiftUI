@@ -22,7 +22,7 @@ struct LearnSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                SecondView()
+                ContentView()
                     .onOpenURL { url in
                         // Handling Deeplinks
                         print("Incoming Deeplink URL: \(url)")

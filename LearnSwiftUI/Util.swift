@@ -39,6 +39,10 @@ struct TVLViewSwiftUI<Wrapper : UIView>: UIViewRepresentable {
     func makeCoordinator() -> SwiftUICoordinator? {
         return coordinate?()
     }
+    
+    static func dismantleUIView(_ uiView: Wrapper, coordinator: SwiftUICoordinator?) {
+        coordinator?.onDismantle()
+    }
 }
 
 struct TVLVCSwiftUI<Wrapper: UIViewController>: UIViewControllerRepresentable {
