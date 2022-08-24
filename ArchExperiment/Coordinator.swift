@@ -23,13 +23,37 @@ class LoginRegisterCoordinator: Coordinator {
     
     func start() {
         // First Start
-        goToHome()
+        onBoarding()
     }
     
-    private func goToHome() {
+    private func onBoarding() {
+        let viewCon: UIViewController = OnBoardingViewController(navigationDelegate: self)
+        activeNavigationController.pushViewController(viewCon, animated: true)
+    }
+    
+    private func goToLogin() {
         let viewModel: LoginViewModel = LoginViewModel()
         let viewCon: UIViewController = LoginViewController(viewModel: viewModel)
-        activeNavigationController.pushViewController(viewCon, animated: false)
+        activeNavigationController.pushViewController(viewCon, animated: true)
+    }
+    
+    private func goToRegister() {
+        let viewCon: UIViewController = RegisterViewController()
+        activeNavigationController.pushViewController(viewCon, animated: true)
+    }
+    
+    deinit {
+        print("Coordinator deinit")
+    }
+}
+
+extension LoginRegisterCoordinator: OnBoardingNavigationDelegate {
+    func onBoardingDidLoginTapped() {
+        goToLogin()
+    }
+    
+    func onBoardingDidRegisterTapped() {
+        goToRegister()
     }
     
 }

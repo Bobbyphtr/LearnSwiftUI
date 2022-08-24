@@ -32,6 +32,9 @@
 		8A18D71228B238850043A6E6 /* ControlImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71128B238850043A6E6 /* ControlImageView.swift */; };
 		8A18D71428B23EE90043A6E6 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71328B23EE90043A6E6 /* PageModel.swift */; };
 		8A18D71628B23F450043A6E6 /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71528B23F450043A6E6 /* PageData.swift */; };
+		8A18D71828B250490043A6E6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71728B250490043A6E6 /* CustomButton.swift */; };
+		8A18D71D28B279620043A6E6 /* IntrinsicSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71C28B279620043A6E6 /* IntrinsicSizeView.swift */; };
+		8A18D72E28B29E9A0043A6E6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */; };
 		8A8CCA4328A905A5007AB83B /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4228A905A5007AB83B /* RestartApp.swift */; };
 		8A8CCA4528A905A5007AB83B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4428A905A5007AB83B /* ContentView.swift */; };
 		8A8CCA4728A905A7007AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4628A905A7007AB83B /* Assets.xcassets */; };
@@ -56,7 +59,7 @@
 		8AA3332728AE1E3500C7CBFD /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3332628AE1E3500C7CBFD /* Coordinator.swift */; };
 		8AA3332928AE1FBD00C7CBFD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3332828AE1FBD00C7CBFD /* LoginView.swift */; };
 		8AA3332B28AE20A700C7CBFD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3332A28AE20A700C7CBFD /* LoginViewModel.swift */; };
-		8AA3332D28AE21D700C7CBFD /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3332C28AE21D700C7CBFD /* Util.swift */; };
+		8AA3332D28AE21D700C7CBFD /* SwiftUIWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3332C28AE21D700C7CBFD /* SwiftUIWrappers.swift */; };
 		8AA3332E28AE258200C7CBFD /* CustomUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9AE07328A12E9700B75470 /* CustomUITextField.swift */; };
 		8AA3333428AE4EBE00C7CBFD /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3333328AE4EBE00C7CBFD /* RegisterView.swift */; };
 		8AA3333828AE505300C7CBFD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA3333728AE505300C7CBFD /* OnBoardingViewController.swift */; };
@@ -99,6 +102,16 @@
 		8A18D71128B238850043A6E6 /* ControlImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlImageView.swift; sourceTree = "<group>"; };
 		8A18D71328B23EE90043A6E6 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		8A18D71528B23F450043A6E6 /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
+		8A18D71728B250490043A6E6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		8A18D71C28B279620043A6E6 /* IntrinsicSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicSizeView.swift; sourceTree = "<group>"; };
+		8A18D71F28B28A340043A6E6 /* IntrinsicContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicContentView.swift; sourceTree = "<group>"; };
+		8A18D72128B28A640043A6E6 /* UIViewContaining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewContaining.swift; sourceTree = "<group>"; };
+		8A18D72328B28A7D0043A6E6 /* UIViewContainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewContainingCoordinator.swift; sourceTree = "<group>"; };
+		8A18D72528B28A940043A6E6 /* UIViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewContainer.swift; sourceTree = "<group>"; };
+		8A18D72728B28AC30043A6E6 /* KeyPathReferenceWritable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathReferenceWritable.swift; sourceTree = "<group>"; };
+		8A18D72928B28ADA0043A6E6 /* ModifiedUIViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedUIViewContainer.swift; sourceTree = "<group>"; };
+		8A18D72B28B28AFD0043A6E6 /* SwiftUIViewConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewConvertable.swift; sourceTree = "<group>"; };
+		8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8A8CCA4028A905A5007AB83B /* RestartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CCA4228A905A5007AB83B /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		8A8CCA4428A905A5007AB83B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,7 +141,7 @@
 		8AA3332628AE1E3500C7CBFD /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8AA3332828AE1FBD00C7CBFD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8AA3332A28AE20A700C7CBFD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		8AA3332C28AE21D700C7CBFD /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		8AA3332C28AE21D700C7CBFD /* SwiftUIWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIWrappers.swift; sourceTree = "<group>"; };
 		8AA3333328AE4EBE00C7CBFD /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		8AA3333728AE505300C7CBFD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		8AADCCAA2897AF6400AE80DC /* LearnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,6 +338,29 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		8A18D71928B2731A0043A6E6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8AA3332C28AE21D700C7CBFD /* SwiftUIWrappers.swift */,
+				8A18D71C28B279620043A6E6 /* IntrinsicSizeView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8A18D71E28B28A1A0043A6E6 /* SwiftUIKitView */ = {
+			isa = PBXGroup;
+			children = (
+				8A18D71F28B28A340043A6E6 /* IntrinsicContentView.swift */,
+				8A18D72128B28A640043A6E6 /* UIViewContaining.swift */,
+				8A18D72328B28A7D0043A6E6 /* UIViewContainingCoordinator.swift */,
+				8A18D72528B28A940043A6E6 /* UIViewContainer.swift */,
+				8A18D72728B28AC30043A6E6 /* KeyPathReferenceWritable.swift */,
+				8A18D72928B28ADA0043A6E6 /* ModifiedUIViewContainer.swift */,
+				8A18D72B28B28AFD0043A6E6 /* SwiftUIViewConvertable.swift */,
+			);
+			path = SwiftUIKitView;
+			sourceTree = "<group>";
+		};
 		8A8CCA4128A905A5007AB83B /* RestartApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,17 +423,18 @@
 		8AA3331328AE1C4200C7CBFD /* ArchExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				8AA3333728AE505300C7CBFD /* OnBoardingViewController.swift */,
-				8AA3332F28AE258500C7CBFD /* CustomViews */,
 				8AA3331428AE1C4200C7CBFD /* AppDelegate.swift */,
 				8AA3331628AE1C4200C7CBFD /* SceneDelegate.swift */,
+				8AA3333728AE505300C7CBFD /* OnBoardingViewController.swift */,
+				8AA3332F28AE258500C7CBFD /* CustomViews */,
 				8AA3333228AE4DC500C7CBFD /* Register */,
 				8AA3333128AE2F5A00C7CBFD /* Login */,
 				8AA3332628AE1E3500C7CBFD /* Coordinator.swift */,
+				8A18D71928B2731A0043A6E6 /* Utils */,
 				8AA3331D28AE1C4400C7CBFD /* Assets.xcassets */,
 				8AA3331F28AE1C4400C7CBFD /* LaunchScreen.storyboard */,
 				8AA3332228AE1C4400C7CBFD /* Info.plist */,
-				8AA3332C28AE21D700C7CBFD /* Util.swift */,
+				8A18D71E28B28A1A0043A6E6 /* SwiftUIKitView */,
 			);
 			path = ArchExperiment;
 			sourceTree = "<group>";
@@ -406,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				8A9AE07328A12E9700B75470 /* CustomUITextField.swift */,
+				8A18D71728B250490043A6E6 /* CustomButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -424,6 +462,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA3333328AE4EBE00C7CBFD /* RegisterView.swift */,
+				8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -770,12 +809,15 @@
 			files = (
 				8AA3333428AE4EBE00C7CBFD /* RegisterView.swift in Sources */,
 				8AA3332728AE1E3500C7CBFD /* Coordinator.swift in Sources */,
+				8A18D71D28B279620043A6E6 /* IntrinsicSizeView.swift in Sources */,
 				8AA3331928AE1C4200C7CBFD /* LoginViewController.swift in Sources */,
 				8AA3331528AE1C4200C7CBFD /* AppDelegate.swift in Sources */,
 				8AA3332928AE1FBD00C7CBFD /* LoginView.swift in Sources */,
 				8AA3332E28AE258200C7CBFD /* CustomUITextField.swift in Sources */,
-				8AA3332D28AE21D700C7CBFD /* Util.swift in Sources */,
+				8AA3332D28AE21D700C7CBFD /* SwiftUIWrappers.swift in Sources */,
+				8A18D71828B250490043A6E6 /* CustomButton.swift in Sources */,
 				8AA3332B28AE20A700C7CBFD /* LoginViewModel.swift in Sources */,
+				8A18D72E28B29E9A0043A6E6 /* RegisterViewController.swift in Sources */,
 				8AA3331728AE1C4200C7CBFD /* SceneDelegate.swift in Sources */,
 				8AA3333828AE505300C7CBFD /* OnBoardingViewController.swift in Sources */,
 			);

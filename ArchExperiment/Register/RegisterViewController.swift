@@ -1,23 +1,20 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  ArchExperiment
 //
-//  Created by Bobby Pehtrus on 18/08/22.
+//  Created by Bobby Pehtrus on 22/08/22.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
 
-/// Demonstrate Representable that does not using Coordinator.
-class LoginViewController: UIViewController {
+class RegisterViewController: UIViewController {
     
-    let viewModel: LoginViewModel
-    lazy var loginView: LoginView = LoginView(viewModel: viewModel)
+    lazy var registerView: RegisterView = RegisterView()
     
-    private lazy var viewHostingController = UIHostingController(rootView: loginView)
+    private lazy var viewHostingController = UIHostingController(rootView: registerView)
     
-    init(viewModel: LoginViewModel) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -49,5 +46,5 @@ class LoginViewController: UIViewController {
         /// Notify the hosting controller that it has been moved to the current view controller.
         viewHostingController.didMove(toParent: self)
     }
+    
 }
-

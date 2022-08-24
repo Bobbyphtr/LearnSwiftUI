@@ -18,13 +18,15 @@ struct LoginView: View {
             Color.white
                 .ignoresSafeArea(.all, edges: .all)
             VStack(spacing: 16.0) {
-                TVLViewSwiftUI  { context in
+                /// Using ``TVLViewSwiftUI`` for showing label. No interaction.
+                TVLViewSwiftUI {_ in
                     let label: UILabel = UILabel()
                     label.text = "Text View"
                     label.font = .systemFont(ofSize: 24.0)
                     label.textAlignment = .center
                     return label
                 }
+                .fixedSize()
                 VStack {
                     TextField("Username", text: $viewModel.username)
                         .padding()
@@ -57,18 +59,11 @@ struct LoginView: View {
                     }
                     
                 }
-                Button {
-                    // validation
+                /// Build in ViewRepresentable from ``CustomButton``
+                SCustomButton(title: "Login") {
                     viewModel.onLoginButtonTapped()
-                } label: {
-                    Text("Login")
-                        .font(.title3)
                 }
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.roundedRectangle)
-                .controlSize(.regular)
-                
-                
+                .fixedSize()
             }
             .padding(.horizontal, 24.0)
             .offset(y: -24)

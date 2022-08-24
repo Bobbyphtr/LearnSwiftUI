@@ -10,8 +10,12 @@ import UIKit
 
 extension NSObject {
     
+    var theClassName: String {
+        return NSStringFromClass(type(of: self))
+    }
+    
     func printLog(_ msg: String) {
-        print("[\(String(describing: self))] : \(msg)")
+        print("[\(theClassName)] : \(msg)")
     }
     
 }
@@ -41,8 +45,11 @@ struct TVLViewSwiftUI<Wrapper : UIView>: UIViewRepresentable {
     }
 
     func updateUIView(_ view: Wrapper, context: Context) {
-        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        // allows rows to be compressed
+//        view.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+        // allows rows to be expanded
+//        view.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        view.setContentHuggingPriority(.required, for: .vertical)
         update?(view, context)
     }
     
