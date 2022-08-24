@@ -71,6 +71,7 @@ class CustomUITextField: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        printLog("Init")
         configureView()
     }
     
@@ -78,19 +79,22 @@ class CustomUITextField: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var isLayout: Bool = false
+    var isLayouted: Bool = false
     override func layoutSubviews() {
         super.layoutSubviews()
-        print("Layout subviews")
-        if isLayout {
-            invalidateIntrinsicContentSize()
-            isLayout = true
-        }
-        
+        // Update width the same as parent
+        widthConstraint?.constant = superview?.frame.size.width ?? 0.0
+        invalidateIntrinsicContentSize()
     }
+    
+    private var widthConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
     
     private func configureView() {
         self.addSubview(mainStackView)
+        
+        widthConstraint =  mainStackView.widthAnchor.constraint(equalToConstant: 0.0)
+        widthConstraint?.isActive = true
         
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: topAnchor),
@@ -104,14 +108,13 @@ class CustomUITextField: UIView {
             textfield.leadingAnchor.constraint(equalTo: textfieldContainer.leadingAnchor, constant: 12.0),
             textfield.heightAnchor.constraint(equalToConstant: 55.0)
         ])
+        
+        
     }
-    
-    var preferredHeight: CGFloat = 0.0
     
     override var intrinsicContentSize: CGSize {
         get {
-            print("Calculate intrinsic content size")
-            return CGSize(width: UIView.noIntrinsicMetric, height: preferredHeight)
+            return mainStackView.systemLayoutSizeFitting(frame.size, withHorizontalFittingPriority: .required, verticalFittingPriority: .defaultLow)
         }
     }
     
@@ -127,18 +130,11 @@ class CustomUITextField: UIView {
             errorLabelContainer.leadingAnchor.constraint(equalTo: errorTextLabel.leadingAnchor),
             errorLabelContainer.trailingAnchor.constraint(equalTo: errorTextLabel.trailingAnchor),
         ])
-        
-        print("Show error")
-        let fitSize = CGSize(width: mainStackView.frame.width, height: .zero)
-        setNeedsUpdateConstraints()
-        updateConstraintsIfNeeded()
-        setNeedsLayout()
-        layoutIfNeeded()
-        self.preferredHeight = systemLayoutSizeFitting(fitSize).height
+        errorTextLabel.sizeToFit()
     }
     
     deinit {
-        print("TextField deinit")
+        printLog("Deinit")
     }
     
 }
@@ -152,7 +148,20 @@ struct CustomUITextField_PreviewProvider: PreviewProvider {
             TVLViewSwiftUI { _ in
                 let tf = CustomUITextField()
                 tf.placeholder = "This is a placeholder"
-                tf.errorText = "This is error text. WIth a long text hahahahahhahhhahahhaha djsapidj sdija psdijas pdijas pidjaspdijpasid paidpaids"
+                tf.errorText = "This is error text."
+                tf.translatesAutoresizingMaskIntoConstraints = false
+                return tf
+            }
+            .border(Color.red)
+            .frame(width: .infinity)
+            .border(Color.blue)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
+            
+            TVLViewSwiftUI { _ in
+                let tf = CustomUITextField()
+                tf.placeholder = "This is a placeholder"
+                tf.errorText = "This is error text. This is a super long and long and long erro text. Should be go to the second line."
                 tf.translatesAutoresizingMaskIntoConstraints = false
                 return tf
             }

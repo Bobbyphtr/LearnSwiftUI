@@ -14,27 +14,24 @@ struct RegisterView: View {
                 Text("Register")
                     .font(.title)
                 
-                TVLViewSwiftUI ({ _ in
-                    let customTf = CustomUITextField()
-                    customTf.placeholder = "Name"
-                    customTf.errorText = "Username error text dkosdk sodk sokd osdk osdk sodk sokd sodk osdk oskdosdk sokdoskd osd kos kd"
-                    customTf.translatesAutoresizingMaskIntoConstraints = false
-                    return customTf
-                })
-                .frame(width: .infinity)
+                TVLViewSwiftUI { _ in
+                    let tf = CustomUITextField()
+                    tf.placeholder = "This is a placeholder"
+                    tf.errorText = "This is error text. This is a super long and long and long erro text. Should be go to the second line."
+                    tf.translatesAutoresizingMaskIntoConstraints = false
+                    return tf
+                }
                 .fixedSize(horizontal: false, vertical: true)
                 
                 TVLViewSwiftUI ({ context in
                     let customTf = CustomUITextField()
-                    customTf.placeholder = "Name"
-                    customTf.errorText = "Username error text dkosdk sodk sokd osdk osdk sodk sokd sodk osdk oskdosdk sokdoskd osd kos kd"
+                    customTf.placeholder = "Password"
+                    customTf.errorText = "Password Error text"
                     customTf.translatesAutoresizingMaskIntoConstraints = false
                     return customTf
                 })
-                .frame(width: .infinity)
                 .fixedSize(horizontal: false, vertical: true)
-                
-    
+
                 TVLViewSwiftUI { _ in
                     let btn = CustomButton(style: .primary)
                     btn.setTitle("Register", for: .normal)

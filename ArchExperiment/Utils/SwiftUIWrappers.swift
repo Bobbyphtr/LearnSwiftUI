@@ -35,26 +35,34 @@ struct TVLViewSwiftUI<Wrapper : UIView>: UIViewRepresentable {
          updater update: Updater? = nil,
          coordinator coordinate: SwiftUICoordinatorFactory? = nil
     ) {
+        print("TVLUISwiftUI: Init")
         self.makeView = makeView
         self.update = update
         self.coordinate = coordinate
     }
 
     func makeUIView(context: Context) -> Wrapper {
-        makeView(context)
+        print("TVLUIViewSwiftUI : makeUIView customtextfield")
+        return makeView(context)
     }
 
     func updateUIView(_ view: Wrapper, context: Context) {
+        print("TVLUIViewSwiftUI : updateUIView customtextfield")
         // allows rows to be compressed
 //        view.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         // allows rows to be expanded
-//        view.setContentHuggingPriority(.defaultLow, for: .horizontal)
-        view.setContentHuggingPriority(.required, for: .vertical)
+//        view.setContentHuggingPriority(.defaultHigh, for: .vertical)
+//        view.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         update?(view, context)
     }
     
     func makeCoordinator() -> SwiftUICoordinator? {
+        print("TVLUIViewSwiftUI : makeCoordinator customtextfield")
         return coordinate?()
+    }
+    
+    static func dismantleUIView(_ uiView: Wrapper, coordinator: SwiftUICoordinator?) {
+        print("TVLUIViewSwiftUI : dismantle")
     }
 }
 
