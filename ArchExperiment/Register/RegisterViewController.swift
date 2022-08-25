@@ -10,11 +10,13 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    lazy var registerView: RegisterView = RegisterView()
+    let viewModel : RegisterViewModel
+    lazy var registerView: RegisterView = RegisterView(viewModel: viewModel)
     
     private lazy var viewHostingController = UIHostingController(rootView: registerView)
     
-    init() {
+    init(viewModel : RegisterViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     

@@ -35,6 +35,7 @@
 		8A18D71828B250490043A6E6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71728B250490043A6E6 /* CustomButton.swift */; };
 		8A18D71D28B279620043A6E6 /* IntrinsicSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D71C28B279620043A6E6 /* IntrinsicSizeView.swift */; };
 		8A18D72E28B29E9A0043A6E6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */; };
+		8A3A18D028B760E40060E2D8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3A18CF28B760E40060E2D8 /* RegisterViewModel.swift */; };
 		8A8CCA4328A905A5007AB83B /* RestartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4228A905A5007AB83B /* RestartApp.swift */; };
 		8A8CCA4528A905A5007AB83B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4428A905A5007AB83B /* ContentView.swift */; };
 		8A8CCA4728A905A7007AB83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8CCA4628A905A7007AB83B /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		8A18D72928B28ADA0043A6E6 /* ModifiedUIViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedUIViewContainer.swift; sourceTree = "<group>"; };
 		8A18D72B28B28AFD0043A6E6 /* SwiftUIViewConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewConvertable.swift; sourceTree = "<group>"; };
 		8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8A3A18CF28B760E40060E2D8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		8A8CCA4028A905A5007AB83B /* RestartApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestartApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8CCA4228A905A5007AB83B /* RestartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestartApp.swift; sourceTree = "<group>"; };
 		8A8CCA4428A905A5007AB83B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				8AA3333328AE4EBE00C7CBFD /* RegisterView.swift */,
+				8A3A18CF28B760E40060E2D8 /* RegisterViewModel.swift */,
 				8A18D72D28B29E9A0043A6E6 /* RegisterViewController.swift */,
 			);
 			path = Register;
@@ -816,6 +819,7 @@
 				8AA3332E28AE258200C7CBFD /* CustomUITextField.swift in Sources */,
 				8AA3332D28AE21D700C7CBFD /* SwiftUIWrappers.swift in Sources */,
 				8A18D71828B250490043A6E6 /* CustomButton.swift in Sources */,
+				8A3A18D028B760E40060E2D8 /* RegisterViewModel.swift in Sources */,
 				8AA3332B28AE20A700C7CBFD /* LoginViewModel.swift in Sources */,
 				8A18D72E28B29E9A0043A6E6 /* RegisterViewController.swift in Sources */,
 				8AA3331728AE1C4200C7CBFD /* SceneDelegate.swift in Sources */,

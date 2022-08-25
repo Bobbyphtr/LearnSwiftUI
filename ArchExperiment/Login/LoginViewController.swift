@@ -19,6 +19,7 @@ class LoginViewController: UIViewController {
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        printLog("init")
     }
     
     required init?(coder: NSCoder) {
@@ -28,6 +29,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSwiftUIView()
+    }
+    
+    deinit {
+        printLog("deinit")
     }
     
     private func configureSwiftUIView() {

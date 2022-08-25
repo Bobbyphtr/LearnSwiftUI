@@ -79,7 +79,6 @@ class CustomUITextField: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var isLayouted: Bool = false
     override func layoutSubviews() {
         super.layoutSubviews()
         // Update width the same as parent

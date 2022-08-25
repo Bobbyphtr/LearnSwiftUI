@@ -38,7 +38,8 @@ class LoginRegisterCoordinator: Coordinator {
     }
     
     private func goToRegister() {
-        let viewCon: UIViewController = RegisterViewController()
+        let viewModel: RegisterViewModel = RegisterViewModel()
+        let viewCon: UIViewController = RegisterViewController(viewModel: viewModel)
         activeNavigationController.pushViewController(viewCon, animated: true)
     }
     

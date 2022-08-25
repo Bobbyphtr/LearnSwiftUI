@@ -34,18 +34,24 @@ class LoginViewModel: NSObject, ObservableObject {
         super.init()
 
         // Binds on username change
-        usernameSub = $username.sink(receiveCompletion: { _ in
-            self.printLog("UsernameSub receiveCompletion triggered")
+        usernameSub = $username.sink(receiveCompletion: { [weak self] _ in
+            self?.printLog("UsernameSub receiveCompletion triggered")
         }, receiveValue: { [weak self] _ in
             self?.onUsernameFieldChange()
         })
         
-        passwordSub = $password.sink(receiveCompletion: { _ in
-            self.printLog("PasswordSub receiveCompletion triggered")
+        passwordSub = $password.sink(receiveCompletion: { [weak self] _ in
+            self?.printLog("PasswordSub receiveCompletion triggered")
         }, receiveValue: { [weak self] _ in
             self?.onPasswordFieldChange()
         })
+        
+        printLog("init")
 
+    }
+    
+    deinit {
+        printLog("Deinit")
     }
     
     func onViewDidLoad() {
